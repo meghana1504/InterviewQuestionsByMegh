@@ -75,5 +75,45 @@ Prototype : A new instance of the bean is created every time it is requested fro
 request : A new instance of the bean is created for each individual HTTP request. It is destroyed when the request processing completes
 Session, Application, Web Socket 
 
+#### [Design Patterns](https://www.geeksforgeeks.org/system-design/java-design-patterns/) 
+Singleton - 
+The Singleton Design Pattern ensures that a class has only one instance and provides a global access point to it. It is used when we want centralized control of resources, such as managing database connections, configuration settings or logging.
 
+    private static Singleton instance;
+    private Singleton()
+    {
+        System.out.println("Singleton is Instantiated.");
+    }
+    public static Singleton getInstance()
+    {
+        if (instance == null)
+            instance = new Singleton();
+        return instance;
+    }
 
+#### [SOLID Principles](https://www.educative.io/answers/what-are-the-solid-principles-in-java) 
+            Principle	                                    Description	
+      Single Responsibility Principle	   Each class should be responsible for a single part or functionality of the system	
+      Open-Closed Principle               Software components should be open for extension, but not for modification.	
+      Liskov Substitution Principle      	Objects of a superclass should be replaceable with objects of its subclasses without breaking the system.	
+      Interface Segregation Principle	   No client should be forced to depend on methods that it does not use.	
+      Dependency Inversion Principle	   High-level modules should not depend on low-level modules, both should depend on abstractions.
+
+   SINGLE RESPONSIBILITY > Dont write everything in one class, separate them </br> 
+   
+   OPEN - CLOSED > Instead of having just one class, create a separate interface and Keep the interface open for extension and the classes implementing it closed for modification </br> 
+   
+   LISKOV SUBSTITUTION > {RUNTIME la problem deto}</br> 
+   “Can I replace parent with child without breaking behavior?” Child should not change expected behaviour of parent </br> 
+👉 Problem shows up at *runtime behavior*, Bird and ostrich example </br> 
+   Abstraction hierarchy will be wrong  </br> 
+   
+   INTERFACE SEGREGATION > </br> 
+   “Am I forcing a class to implement things it doesn’t need?” </br>
+👉 Problem is in design of the interface itself </br> 
+    Moslty the interface will have TOO MANY METHODS  </br> 
+    
+   DEPENDENCY INVERSION > </br>  
+   Both high level modules and low level modules should depend on abstraxtions, and not on each other
+
+   
