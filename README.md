@@ -113,7 +113,18 @@ The Singleton Design Pattern ensures that a class has only one instance and prov
 👉 Problem is in design of the interface itself </br> 
     Moslty the interface will have TOO MANY METHODS  </br> 
     
-   DEPENDENCY INVERSION > </br>  
+   DEPENDENCY INVERSION > </br>
+   DIP is about dependency direction, not object creation style
    Both high level modules and low level modules should depend on abstraxtions, and not on each other
+
+
+   | Situation                          | Principle |
+   | ---------------------------------- | --------- |
+   | One class doing too many things    | **SRP**   |
+   | Child breaks parent behavior       | **LSP**   |
+   | Forced unused methods              | **ISP**   |
+   | Hardcoded dependency               | **DIP**   |
+   | Add new behavior without modifying | **OCP**   |
+
 
    
